@@ -48,6 +48,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
@@ -107,29 +108,23 @@ class ChatBotMain: ComponentActivity() {
                             Box(
                                 modifier = Modifier
                                     .fillMaxWidth()
-                                    .background(MaterialTheme.colorScheme.primary)
-                                    .height(35.dp)
+                                    .background(Color(0xFFFFFFFF))
+                                    .height(50.dp)
                                     .padding(horizontal = 16.dp)
                             ) {
                                 //Modify text
-                                Text(
-                                    modifier = Modifier
-                                        .align(Alignment.TopStart),
-                                    text = stringResource(id = R.string.app_name),
-                                    fontSize = 19.sp,
-                                    color = MaterialTheme.colorScheme.onPrimary
-                                )
                                 //Modify Icon
                                 IconButton(
                                     modifier = Modifier
-                                        .align(Alignment.TopEnd),
+                                        .align(Alignment.TopEnd).padding(top = 15.dp).size(48.dp),
                                     onClick = { navigateToMainActivity() }
                                 ) {
 
                                     Icon(
                                         imageVector = Icons.Default.Home,
                                         contentDescription = "Back Home",
-                                        tint = MaterialTheme.colorScheme.onPrimary
+                                        tint = Color(0xFF2EA1B2),
+                                        modifier = Modifier.size(32.dp)
                                     )
                                 }
                             }
@@ -157,7 +152,7 @@ class ChatBotMain: ComponentActivity() {
                 Box(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .background(MaterialTheme.colorScheme.primary)
+                        .background(Color(0xFF2EA1B2))
                         .height(35.dp)
                         .padding(horizontal = 16.dp)
                 ) {
@@ -166,7 +161,7 @@ class ChatBotMain: ComponentActivity() {
                             .align(Alignment.TopStart),
                         text = stringResource(id = R.string.app_name),
                         fontSize = 19.sp,
-                        color = MaterialTheme.colorScheme.onPrimary
+                        color = Color(0xFF2EA1B2)
                     )
                     IconButton(
                         modifier = Modifier
@@ -176,7 +171,7 @@ class ChatBotMain: ComponentActivity() {
                         Icon(
                             imageVector = Icons.Default.Home,
                             contentDescription = "Back Home",
-                            tint = MaterialTheme.colorScheme.onPrimary
+                            tint = Color(0xFF2EA1B2)
                         )
                     }
                 }
@@ -254,7 +249,7 @@ class ChatBotMain: ComponentActivity() {
                                 },
                             imageVector = Icons.Rounded.AddPhotoAlternate,
                             contentDescription = "Add Image",
-                            tint = MaterialTheme.colorScheme.primary
+                            tint = Color(0xFF2EA1B2)
                         )
                     }
 
@@ -283,7 +278,7 @@ class ChatBotMain: ComponentActivity() {
                             },
                         imageVector = Icons.Rounded.Send,
                         contentDescription = "Send message",
-                        tint = MaterialTheme.colorScheme.primary
+                        tint = Color(0xFF2EA1B2)
                     )
                 }
             }
@@ -314,11 +309,11 @@ class ChatBotMain: ComponentActivity() {
                 modifier = Modifier
                     .fillMaxWidth()
                     .clip(RoundedCornerShape(12.dp))
-                    .background(MaterialTheme.colorScheme.primary)
+                    .background(Color(0xFF2EA1B2))
                     .padding(16.dp),
                 text = prompt,
                 fontSize = 17.sp,
-                color = MaterialTheme.colorScheme.onPrimary
+                color = Color(0xFFFFFFFF)
             )
 
         }
@@ -335,11 +330,11 @@ class ChatBotMain: ComponentActivity() {
                 modifier = Modifier
                     .fillMaxWidth()
                     .clip(RoundedCornerShape(12.dp))
-                    .background(Green)
+                    .background(Color(0xFFF15B30))
                     .padding(16.dp),
                 text = response,
                 fontSize = 17.sp,
-                color = MaterialTheme.colorScheme.onPrimary
+                color = Color(0xFFFFFFFF)
             )
 
         }
