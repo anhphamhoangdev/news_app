@@ -35,4 +35,9 @@
             android:id="@+id/action_searchFragment_to_acticleFragment"
             app:destination="@id/acticleFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/accountFragment"
+        android:name="com.example.thenewsappmobile.ui.fragments.AccountFragment"
+        android:label="AccountFragement" >
+    </fragment>
 </navigation>
