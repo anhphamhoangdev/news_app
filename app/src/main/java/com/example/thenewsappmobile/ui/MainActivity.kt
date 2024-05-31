@@ -52,7 +52,7 @@ class MainActivity : AppCompatActivity() {
             val currentUser = mAuth.currentUser
             if (currentUser != null) {
             // User is already signed in, proceed to ChatBotMain
-                val intent = Intent(this, ChatBotMain::class.java)
+                val intent = Intent(this, NewsActivity::class.java)
                 startActivity(intent)
             } else {
             // User is not signed in, display a message or navigate to the sign-in screen

@@ -33,7 +33,7 @@ class SignInActivity : AppCompatActivity() {
 
         if (currentUser != null) {
             // The user is already signed in, navigate to MainActivity
-            val intent = Intent(this, ChatBotMain::class.java)
+            val intent = Intent(this, NewsActivity::class.java)
             startActivity(intent)
             finish() // finish the current activity to prevent the user from coming back to the SignInActivity using the back button
         }

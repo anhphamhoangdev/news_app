@@ -144,7 +144,7 @@ class ChatBotMain: ComponentActivity() {
     }
 
     private fun navigateToMainActivity() {
-        val intent = Intent(this, MainActivity::class.java)
+        val intent = Intent(this, NewsActivity::class.java)
         startActivity(intent)
         finish() // Finish ChatBotMain activity
     }
